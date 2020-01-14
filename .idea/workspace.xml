@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8461bb5e-3d92-4101-a49d-5c036caefbf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/controllers/DevController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/controllers/SearchController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/utils/parseStringAsArray.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/DevController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/DevController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1579003813996</updated>
       <workItem from="1579003824438" duration="5061000" />
-      <workItem from="1579010087026" duration="4538000" />
+      <workItem from="1579010087026" duration="4649000" />
+      <workItem from="1579028012893" duration="1423000" />
     </task>
     <servers />
   </component>
@@ -80,7 +81,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
