@@ -1,8 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const {routes} = require('./routes')
+const infos = require('./config')
 const app = express()
-mongoose.connect('mongodb+srv://alvaro:38517344@cluster0-bred1.mongodb.net/DevRadar?retryWrites=true&w=majority', {
+mongoose.connect(infos.credentials, {
         useNewUrlParser: true,
         useUnifiedTopology: true
 })
