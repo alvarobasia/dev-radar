@@ -4,7 +4,8 @@ import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 import MapView, { Marker, Callout }from  'react-native-maps'
 import { MaterialIcons } from '@expo/vector-icons'
 import api from '../services/api'
-import {addWhitelistedInterpolationParam} from "react-native-web/dist/vendor/react-native/Animated/NativeAnimatedHelper";
+import { connect, disconnect, subscribeToNewDevs } from '../services/socket'
+import {set} from "react-native-reanimated";
 
 /**
  * @return {null}
@@ -34,6 +35,14 @@ function Main({ navigation }) {
     }
     loadInitialPosition()
   }, [])
+  useEffect(() => {
+    subscribeToNewDevs( dev => setDevs([...devs, dev]))
+  }, [devs])
+  function setupWebSocket(){
+    disconnect()
+    const { latitude, longitude} = currentRegion
+    connect(latitude, longitude, techs)
+  }
   async function loadDevs() {
     const {latitude, longitude} = currentRegion
 
@@ -44,11 +53,8 @@ function Main({ navigation }) {
         techs
     }
     })
-    console.log(techs)
-    console.log(latitude)
-    console.log(longitude)
-    console.log(response.data)
     setDevs(response.data)
+    setupWebSocket()
   }
 
   function handleRegionChanged(region) {
